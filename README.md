@@ -1,2 +1,2 @@
 # meu-app
-MeuApp - Gerencia pessoal
+MeuApp - Gerência pessoal
