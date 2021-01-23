@@ -1,0 +1,57 @@
+.Login-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .container {
+      display: inline-block;
+      border: solid 2px green;
+      margin: 20px;
+      padding: 35px;
+      color: green;
+  }
+
+  h1 {
+      margin: 0;
+      margin-bottom: 0.3em;
+      padding-bottom: 0.2em;
+      font-size: 1.7em;
+      background-color: #222826;
+  }
+
+  .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 0.8em;
+  }
+
+  .label {
+      margin-right: 0.4em;
+  }
+
+  input, button {
+      background-color: #282c34;
+      border: solid 1px green;
+      border-radius: 3px;
+      color: white;
+      font-size: 0.8em;
+  }
+
+  input:-moz-any() {
+    background-color: #282c34;
+  }  
+
+  button {
+      padding: 10px 30px;
+  }
+
+  hr {
+      border: solid 1px green;
+  }
