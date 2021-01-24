@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import '../css/Login.css'
 
+// import { useApi } from '../api/useApi'
+import api from '../api/api'
+
 class Login extends Component {
     state = {
         loginData: {
@@ -22,7 +25,19 @@ class Login extends Component {
     btnEntrarclick = e => {
         const { user, pass } = this.state.loginData
         if (user && pass) {
-            alert(`Usuário ${user} entrou!`)
+            // const { data,error } = useApi('users')
+            api.get(`users/${user}`)
+                .then(response => {
+                    if (response.status === 200 && response.data) {
+                        if (response.data.pass === pass)
+                            window.location.href = '/'
+                         else   
+                            alert(`Senha informada para o usuário ${user} não confere!`)
+                    } else if (response.status === 404) {
+                        alert(`Usuário ${user} não encontrado!`)
+                    }
+                })
+                .catch(err => alert(`Usuário ${user} não encontrado!`))
         } else {
             alert('Informe usuário e senha!')
         }
